@@ -1,6 +1,6 @@
 ## Simulation Aéroport
 
-Gestion dun aéroport
+Gestion d'un aéroport
 
 Codé en python, puis en C
 
