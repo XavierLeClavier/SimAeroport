@@ -59,6 +59,7 @@ Heure fin embarquement
 - Date de naissance
 Numéro de siège
 - Prix billet
+
 Partie 1 : Algorithmique
 La partie analyse, en amont de l'implémentation en C, constituera la SAÉ d'algorithmique.
 Il s'agira ici d'identifier / choisir les différents algorithmes qui seront implémentés, de donner leurs spécifications formelles (contrats ou parties statiques), leurs codes, leurs complexités théoriques. On pourra envisager d'évaluer leur efficacité pratique à travers une implémentation en langage python qui se chargera de dénombrer les opérations élémentaires lors d'une exécution. Dans le cas où vous auriez identifié plusieurs algorithmes possibles pour traiter un même problème, vous pouvez vous appuyer sur tous ces éléments pour justifier le choix de l'algorithme retenu.
