@@ -4,7 +4,7 @@ from random import *
 def rand_vol(n):
     """
     :Créer un certain nombre de vol aléatoire défini selon n
-
+    :
     :entree/sortie tab: tableau de int
     :entree num, compagnie, dest, num_comptoir, h_d_enr
     :h_f_enr, num_salle, h_d_emb, h_f_emb, h_decolle,

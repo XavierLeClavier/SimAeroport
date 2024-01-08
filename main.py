@@ -1,5 +1,5 @@
 import csv
-from numpy import empty
+import numpy as np
 
 TAB_COMPAGNIE = [
     "Delta Airlines",
@@ -22,25 +22,27 @@ def lire_fichier_csv(filepath):
 
 def tab_horaire():
     """
-    Renvoie un tableau avec les différentes horaires
+    Renvoie un tableau avec les différentes horaires de 6h00 à 22h00, toutes les 5 minutes.
     :Postcondition:
-    :   tab: tableau de str
+    :   tab: tableau de str contenant les horaires
     """
-    e = 0
-    tab = empty(192, dtype=str)
-    h = 6
-    while h < 22:
-        m = 0
-        while m < 60:
-            if m < 10:
+    tab = np.empty(192, dtype='U5')  # Crée un tableau vide de 192 éléments pour stocker les horaires avec des chaînes de longueur 5
+    e = 0  # Indice pour remplir le tableau
+    h = 6  # Heure de départ (6h00)
+    
+    while h < 22:  # Boucle pour chaque heure de 6 à 21
+        m = 0 
+        while m < 60:  # Boucle pour chaque tranche de 5 minutes dans une heure
+            if m < 10:  # Formatage des minutes pour s'assurer que le format est toujours hh:mm
                 tab[e] = f"{h}:0{m}"
             else:
                 tab[e] = f"{h}:{m}"
-            m += 5
-            e += 1
-        h += 1
-    tab[-1] = "22:00"
-    return tab
+            m += 5  # Incrémente de 5 minutes
+            e += 1 
+        h += 1 
+    
+    tab[-1] = "22:00" 
+    return tab 
 
 def tri_insertion(tab):
     i = 1
@@ -283,5 +285,8 @@ def main():
 
     # Charger les données à partir du fichier CSV
     data_vols = lire_fichier_csv('data_vols.csv')
+    
+    tableau = tab_horaire()
+    print(tableau)
 
 main()
